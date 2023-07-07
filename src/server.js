@@ -19,10 +19,10 @@ const server = http.createServer((req, res) => {
 
     })
 
-    return res.end('Criação de usuário\n')
+    return res.writeHead(201).end().
    }
   
-  return res.end('Hello World\n')
+  return res.writeHead(404).end()
 })
 
 server.listen(3333)
