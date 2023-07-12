@@ -9,6 +9,8 @@ export const routes = [
     method: 'GET',
     path: buildRoutePath('/users'),
     handler: (req, res) => {
+      console.log(req.query)
+
       const users = database.select('users')
     
     
@@ -41,7 +43,7 @@ export const routes = [
 
       database.update('users', id, {
         name, 
-        email,
+        email, 
       })
 
       return res.writeHead(204).end()
